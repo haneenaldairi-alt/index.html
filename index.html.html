@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بِرُّ الوالدين – مغامرة كنز الجنّة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#243b53;--card:#ffffffee;--br:#ffd166;--ok:#2bb673;--no:#ef6f6c;--pu:#7b61ff;--or:#ff9f43;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#1d2f44}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:'Cairo','Segoe UI',Tahoma,sans-serif;color:var(--ink);background:#bfe9ff;overflow:hidden}
+#app{height:100%;display:flex;flex-direction:column}
+#stage{flex:1;position:relative;min-height:0}
+.s{display:none;position:absolute;inset:0;overflow-y:auto;padding:14px 16px 20px;text-align:center;animation:in .6s ease both}
+.s.on{display:flex;flex-direction:column;align-items:center;gap:10px}
+@keyframes in{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
+.b1{background:linear-gradient(160deg,#9be0ff,#e5f7ff 60%,#fff3c4)}
+.b2{background:linear-gradient(160deg,#c9f7c4,#fff6bf)}
+.b3{background:linear-gradient(160deg,#ffe0f0,#ffeec2)}
+.b4{background:linear-gradient(160deg,#d8ccff,#c9ecff)}
+.b5{background:linear-gradient(160deg,#ffd9b3,#ffeaa7)}
+.b6{background:linear-gradient(160deg,#c2f0e6,#d9e8ff)}
+.b7{background:linear-gradient(160deg,#fff0a8,#ffc9de)}
+.b8{background:linear-gradient(160deg,#ffcfa0,#fbe4ff)}
+h1{font-size:clamp(34px,8vw,64px);margin:0;color:#e0562b;text-shadow:0 4px 0 #fff;font-weight:900}
+h2{font-size:clamp(22px,4.6vw,36px);margin:0;background:var(--pu);color:#fff;padding:4px 22px;border-radius:40px;box-shadow:0 5px 0 #5a43c9}
+p{margin:0}.big{font-size:clamp(18px,3.6vw,28px);font-weight:700;line-height:1.7}
+.card{background:var(--card);border-radius:22px;padding:12px 18px;box-shadow:0 6px 0 #0001,0 10px 24px #0002;max-width:760px;width:100%}
+.row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;width:100%}
+.mas{display:flex;align-items:center;gap:10px;max-width:760px;width:100%}
+.face{font-size:64px;width:96px;height:96px;flex:none;border-radius:50%;background:radial-gradient(#fff,#ffe29a);display:grid;place-items:center;box-shadow:0 6px 0 #e0a92b;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-4deg)}}
+.bub{background:#fff;border:3px solid var(--or);border-radius:24px;padding:10px 16px;font-weight:700;font-size:clamp(16px,3vw,22px);text-align:right;position:relative}
+.bub:before{content:"";position:absolute;right:-14px;top:30px;border:9px solid transparent;border-left-color:var(--or);transform:rotate(180deg)}
+button{font-family:inherit;cursor:pointer;border:0;border-radius:40px;font-weight:900;font-size:clamp(16px,3vw,22px);padding:10px 26px;color:#fff;background:var(--or);box-shadow:0 5px 0 #c9751f;transition:.15s}
+button:active{transform:translateY(4px);box-shadow:0 1px 0 #c9751f}
+.opt{background:#fff;color:var(--ink);box-shadow:0 5px 0 #b9c6d6;border:3px solid #cfe0f5;width:100%;max-width:560px;text-align:right}
+.opt.ok{background:var(--ok);color:#fff;border-color:#1c8a56;animation:pop .5s}
+.opt.no{background:var(--no);color:#fff;opacity:.85;animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.07)}}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.st{display:none}.st.on{display:block;animation:in .6s both}
+.ico{font-size:clamp(46px,10vw,84px);animation:bob 2.4s infinite}
+.ico:nth-child(2){animation-delay:.4s}.ico:nth-child(3){animation-delay:.8s}
+.ayah{font-size:clamp(20px,4vw,32px);line-height:2.1;font-weight:700;color:#0d6b4f;background:#f0fff6;border:3px solid #7ad3a8;border-radius:22px;padding:8px 16px}
+.bl{display:inline-block;min-width:64px;border-bottom:3px dashed var(--pu);color:var(--pu);cursor:pointer;font-weight:900;padding:0 6px;border-radius:8px}
+.bl.on{background:#e4dcff;border-bottom-style:solid;animation:pop .5s}
+.mp{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:900px;width:100%}
+@media(max-width:640px){.mp{grid-template-columns:1fr}}
+.mp .card{text-align:right;font-size:clamp(15px,2.6vw,20px);font-weight:700;line-height:2}
+.mp h3{margin:0 0 4px;text-align:center;color:#e0562b}
+.w{background:#fff;border:3px solid #cfe0f5;border-radius:16px;padding:6px 14px;font-weight:900;font-size:clamp(20px,4vw,30px);color:var(--ink);box-shadow:0 4px 0 #b9c6d6}
+.chk{width:100%;max-width:620px;background:#fff;color:var(--ink);box-shadow:0 5px 0 #b9c6d6;text-align:right;border:3px solid #cfe0f5}
+.chk.on{background:#d6f7e5;border-color:var(--ok)}
+.fb{min-height:34px;font-weight:900;font-size:clamp(17px,3.2vw,24px)}
+.stars{background:#fff;border-radius:30px;padding:2px 14px;font-weight:900;box-shadow:0 3px 0 #0002}
+nav{display:flex;align-items:center;gap:8px;padding:8px 12px;background:#fffd;border-top:3px solid var(--br)}
+nav button{padding:6px 16px;font-size:18px}
+#bar{flex:1;height:12px;background:#e6edf5;border-radius:10px;overflow:hidden}
+#bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffd166,#ff9f43);transition:.4s}
+#notes{display:none;background:#243b53;color:#fff;padding:10px 16px;font-size:16px;line-height:1.8;max-height:28vh;overflow:auto;text-align:right}
+#notes.on{display:block}#notes b{color:#ffd166}
+.cf{position:fixed;top:-30px;font-size:30px;pointer-events:none;animation:fall 2.6s linear forwards;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+.badge{font-size:clamp(70px,16vw,130px);animation:pop 1s infinite}
+.s{background-attachment:local}
+.b1{background:radial-gradient(circle at 10% 15%,#fffa 0 70px,#fff0 72px),radial-gradient(circle at 92% 12%,#fff9 0 46px,#fff0 48px),radial-gradient(ellipse at 85% 100%,#ffe9a8aa 0 38%,#fff0 40%),radial-gradient(ellipse at 0% 100%,#b9f0d6aa 0 34%,#fff0 36%),linear-gradient(175deg,#a6e3ff,#d6f3ff 55%,#fff3cf)}
+.b2{background:radial-gradient(circle at 90% 10%,#fff9 0 80px,#fff0 82px),radial-gradient(ellipse at 10% 100%,#ffe9a8aa 0 36%,#fff0 38%),radial-gradient(ellipse at 100% 100%,#bfe8ffaa 0 32%,#fff0 34%),linear-gradient(175deg,#b6f0cf,#e3fbe5 55%,#fff7cf)}
+.b3{background:radial-gradient(circle at 8% 12%,#fff9 0 64px,#fff0 66px),radial-gradient(ellipse at 100% 100%,#ffd0e4aa 0 36%,#fff0 38%),radial-gradient(ellipse at 0% 100%,#ffe9b8aa 0 32%,#fff0 34%),linear-gradient(175deg,#ffd5e8,#fff0f6 55%,#ffeec7)}
+.b4{background:radial-gradient(circle at 88% 14%,#fff9 0 70px,#fff0 72px),radial-gradient(ellipse at 0% 100%,#c8f0ffaa 0 36%,#fff0 38%),radial-gradient(ellipse at 100% 100%,#f0d6ffaa 0 32%,#fff0 34%),linear-gradient(175deg,#d8cffd,#e9f2ff 55%,#d0f0ff)}
+.b5{background:radial-gradient(circle at 12% 12%,#fff9 0 66px,#fff0 68px),radial-gradient(ellipse at 100% 100%,#ffe2a8aa 0 36%,#fff0 38%),radial-gradient(ellipse at 0% 100%,#ffd0daaa 0 32%,#fff0 34%),linear-gradient(175deg,#ffd6b3,#fff2d8 55%,#ffe3ea)}
+.b6{background:radial-gradient(circle at 90% 12%,#fff9 0 72px,#fff0 74px),radial-gradient(ellipse at 0% 100%,#d9ffe0aa 0 36%,#fff0 38%),radial-gradient(ellipse at 100% 100%,#d6e4ffaa 0 32%,#fff0 34%),linear-gradient(175deg,#b3ece1,#def3ff 55%,#e7ffea)}
+.b7{background:radial-gradient(circle at 10% 14%,#fff9 0 68px,#fff0 70px),radial-gradient(ellipse at 100% 100%,#ffd6e6aa 0 36%,#fff0 38%),radial-gradient(ellipse at 0% 100%,#cdeeffaa 0 32%,#fff0 34%),linear-gradient(175deg,#fff2ae,#ffe3ee 55%,#e6f6ff)}
+.b8{background:radial-gradient(circle at 88% 12%,#fff9 0 70px,#fff0 72px),radial-gradient(ellipse at 0% 100%,#ffe9a8aa 0 36%,#fff0 38%),radial-gradient(ellipse at 100% 100%,#d6ecffaa 0 32%,#fff0 34%),linear-gradient(175deg,#ffd9c4,#f5e2ff 55%,#d9f2ff)}
+.card{border-radius:30px;border:4px solid #fff;box-shadow:0 8px 22px #5a7fa133}
+h2{background:linear-gradient(135deg,#8f7bff,#5fb6ff);box-shadow:0 5px 0 #6a5fd9}
+.opt{border-radius:28px}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important}}
+</style>
+</head>
+<body>
+<div id="app">
+<main id="stage">
+
+<!-- 1 المفاجأة -->
+<section class="s b1" data-n="<b>قولي:</b> «اليوم سنبحث عن كنزين غاليين جداً!» <b>اسألي:</b> من تتوقعون أن يكونا؟ اسمعي 3 إجابات ثم اضغطي «ابدأ المغامرة».">
+<div style="font-size:56px">🗝️ ✨ 🌟</div>
+<h1>بِرُّ الوالِدَيْن</h1>
+<h2>الدرس الأول • مغامرة كنز الجنّة</h2>
+<div class="mas"><div class="face">🧒</div><div class="bub">مرحباً يا بطل! أنا <b>راشد المستكشف</b>. سنكتشف معاً من هما أغلى كنزين في حياتك! 🗺️</div></div>
+<button onclick="go(1)">ابدأ المغامرة 🚀</button>
+</section>
+
+<!-- 2 لنبدأ المغامرة -->
+<section class="s b2" data-n="<b>قولي:</b> انظروا إلى هذه المخلوقات الصغيرة. <b>اسألي:</b> من يرعاها حتى تكبر؟ ماذا يحدث لو لم تجد من يرعاها؟ <b>توقفي</b> للاستماع، ثم اقرئي اللغز ببطء واتركيهم يخمّنون قبل الإجابة.">
+<h2>لنبدأ المغامرة 🌿</h2>
+<div class="row"><span class="ico">🐑</span><span class="ico">🐣</span><span class="ico">👶</span></div>
+<div class="card big">هذه المخلوقات الصغيرة تحتاج إلى رعاية واهتمام حتى تكبر… <b>من يرعاها؟</b> 🤔</div>
+<div class="st card big">ماذا يحدث لو لم تجد هذه المخلوقات الرعاية الكافية؟</div>
+<div class="st mas"><div class="face">👨‍🏫</div><div class="bub">قلبانِ ليسَ لهما مثيلٌ، أحبّاكَ، أحسنا إليكَ، رأفا بكَ، هما من كانا السببَ في وجودِك. فمن هما؟ 💭</div></div>
+<div class="st card big" style="background:#fff2b8">الإجابة: <b>الوالدان!</b> أمي وأبي 💛</div>
+<button class="nx">اكشف السر ✨</button>
+</section>
+
+<!-- 3 الأهداف -->
+<section class="s b3" data-n="<b>قولي:</b> هذه ثلاث مهام سنحققها اليوم. اقرئي كل هدف واطلبي من الطلاب أن يرددوه معك. <b>انتقال:</b> «هيا نكتشف أول سر!»">
+<h2>ماذا سنتعلم اليوم؟ 🎯</h2>
+<div class="card big">⭐ أُبيّنُ فضلَ الوالدين وجزاءَ برِّهما.</div>
+<div class="card big">🤝 أستنتجُ أنَّ الإحسانَ للوالدين وطاعتَهما عبادةٌ.</div>
+<div class="card big">🗣️ أُعبّرُ بأسلوبي عن كيفيةِ بِرِّ الوالدين.</div>
+<div class="mas"><div class="face">🧒</div><div class="bub">جاهزون يا أبطال؟ في كل محطة نجمع <b>نجوماً ⭐</b>!</div></div>
+</section>
+
+<!-- 4 اكتشف: الآية -->
+<section class="s b4" data-n="<b>اقرئي</b> الآية بصوت واضح وكرّريها مع الطلاب. <b>اسألي:</b> بماذا يأمرنا الله؟ <b>توقفي</b> لسماع الإجابات ثم اكشفي. اقرئي الجزء الثاني وأكدي أن طاعتهما والإحسان إليهما عبادة.">
+<h2>اكتشف بنفسك: الرسالة الأولى 📜</h2>
+<div class="ayah">﴿وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوا إِلَّا إِيَّاهُ وَبِالْوَالِدَيْنِ إِحْسَانًا﴾ <small>[الإسراء: 23]</small></div>
+<div class="card big">بماذا يأمرنا اللهُ تعالى في هذه الآية؟ 🤔</div>
+<div class="st card big" style="background:#d6f7e5">يأمرنا بعبادته وحده، <b>وبالإحسان إلى الوالدين</b> 💚</div>
+<div class="st ayah">﴿إِمَّا يَبْلُغَنَّ عِندَكَ الْكِبَرَ أَحَدُهُمَا أَوْ كِلَاهُمَا فَلَا تَقُل لَّهُمَا أُفٍّ وَلَا تَنْهَرْهُمَا وَقُل لَّهُمَا قَوْلًا كَرِيمًا﴾</div>
+<div class="st card big" style="background:#fff2b8">🌟 الإحسانُ للوالدين وطاعتُهما <b>عبادةٌ</b>!</div>
+<button class="nx">الكلمة التالية ✨</button>
+</section>
+
+<!-- 5 الحديث -->
+<section class="s b5" data-n="<b>اقرئي</b> الحديث ثم اسألي: عمّ ينهانا الرسول ﷺ؟ كيف يكون الوالدان سببًا في دخول الجنة؟ <b>توقفي</b> للاستماع. ثم اقرئي الحديث الثاني واقلبي البطاقتين: الجزاء والعقوبة.">
+<h2>اكتشف بنفسك: كنز الحديث 💎</h2>
+<div class="card big" style="color:#a3401c">قال الرسول ﷺ: «رَغِمَ أَنْفُهُ، ثُمَّ رَغِمَ أَنْفُهُ، ثُمَّ رَغِمَ أَنْفُهُ». قيل: من يا رسول الله؟ قال: «مَنْ أَدْرَكَ وَالِدَيْهِ عِندَ الْكِبَرِ، أَحَدَهُمَا أَوْ كِلَيْهِمَا، ثُمَّ لَمْ يَدْخُلِ الْجَنَّةَ» <small>(رواه مسلم)</small></div>
+<div class="card big">❓ عمّ ينهانا الرسول ﷺ؟ وكيف يكون الوالدان سبباً في دخول الجنة؟</div>
+<div class="st card big" style="color:#0d6b4f">قال رسول الله ﷺ: «رِضَا اللهِ فِي رِضَا الْوَالِدَيْنِ، وَسَخَطُ اللهِ فِي سَخَطِ الْوَالِدَيْنِ» <small>(رواه الترمذي)</small></div>
+<div class="st row"><div class="card big" style="background:#d6f7e5;max-width:360px">😊 جزاء من يبرّ والديه:<br><b>رضا الله</b></div><div class="card big" style="background:#ffdada;max-width:360px">😟 عقوبة من لا يبرّهما:<br><b>سخط الله</b></div></div>
+<button class="nx">اكشف المزيد ✨</button>
+</section>
+
+<!-- 6 الخريطة -->
+<section class="s b6" data-n="<b>قولي:</b> هذه خريطة الكنز! اضغطي على كل كلمة مخفية واطلبي من طالب أن يخمّنها قبل الكشف. <b>اربطي</b> كل بند بمثال من حياتهم. كل كلمة صحيحة = نجمة.">
+<h2>خريطة بِرّ الوالدين 🗺️</h2>
+<div class="mp">
+<div class="card"><h3>معناهُ 💛</h3>
+١. طاعةُ الوالدين وإظهارُ <span class="bl" data-w="الحبّ">؟</span> والاحترامِ لهما.<br>
+٢. الإحسانُ لهما بمساعدتِهما وتلبيةِ <span class="bl" data-w="طلباتِهما">؟</span><br>
+٣. التواضعُ <span class="bl" data-w="لهما">؟</span> ومعاملتُهما برفقٍ.<br>
+٤. خفضُ <span class="bl" data-w="الصوتِ">؟</span> عند الحديثِ معهما.<br>
+٥. استعمالُ أعذبِ الكلماتِ وأجملِها عند <span class="bl" data-w="الحديثِ">؟</span> معهما.<br>
+٦. إحسانُ التعاملِ معهما وهما في مرحلةِ <span class="bl" data-w="الكِبَرِ">؟</span><br>
+٧. الدعاءُ لهما بـ<span class="bl" data-w="الرحمةِ والمغفرةِ">؟</span></div>
+<div class="card"><h3>فضلُهُ 🌈</h3>
+١. إنه سببُ دخولِ <span class="bl" data-w="الجنّةِ">؟</span><br>
+٢. من أحبِّ الأعمالِ إلى <span class="bl" data-w="اللهِ">؟</span><br>
+٣. رضا الوالدين من رضا <span class="bl" data-w="اللهِ">؟</span><br><br>
+<div style="text-align:center;font-size:44px">🌈📖🕌</div></div>
+</div>
+</section>
+
+<!-- 7 هيا نفكر -->
+<section class="s b7" data-n="<b>اقرئي</b> الموقف واسألي: ماذا يجب أن أفعل؟ <b>توقفي</b> لسماع إجابة طالب ثم اطلبي منه الضغط. إذا أخطأ اطلبي منه المحاولة مجدداً بعد قراءة التلميح.">
+<h2>هيا نفكر: ماذا أفعل؟ 💭</h2><div class="card" id="g-think"></div>
+</section>
+
+<!-- 8 صائد الإجابات -->
+<section class="s b2" data-n="<b>قولي:</b> الآن نصطاد الإجابات الصحيحة! اختاري طالباً لكل سؤال، وشجّعي الجميع بالتصفيق عند كل إجابة صحيحة.">
+<h2>لعبة صائد الإجابات 🎣</h2><div class="card" id="g-quiz"></div>
+</section>
+
+<!-- 9 صح أم خطأ -->
+<section class="s b3" data-n="<b>قولي:</b> ارفعوا أيديكم لـ «صح» وضعوا أيديكم على رؤوسكم لـ «خطأ» قبل أن أضغط! اطلبي تبرير كل إجابة خاطئة: ماذا كان يجب أن يفعل؟">
+<h2>صحّ أم خطأ؟ ✅❌</h2><div class="card" id="g-tf"></div>
+</section>
+
+<!-- 10 رتب -->
+<section class="s b4" data-n="<b>قولي:</b> كلمات الآية اختلطت! اطلبي من طالب ترتيبها بالضغط على الكلمات بالتسلسل الصحيح. اقرئيها كاملة مع الجميع بعد النجاح.">
+<h2>رتّب كلمات الآية 🧩</h2>
+<div class="card big">رتّب الكلمات لتكوّن جزءاً من الآية:</div>
+<div class="card big" id="ans" style="min-height:70px;font-size:30px;color:#0d6b4f"></div>
+<div class="row" id="pool"></div><div class="fb" id="ofb"></div>
+<button onclick="ord()" style="background:#7b61ff;box-shadow:0 5px 0 #5a43c9">إعادة 🔄</button>
+</section>
+
+<!-- 11 من أنا -->
+<section class="s b5" data-n="<b>اقرئي</b> التلميح ببطء واتركيهم يخمّنون بصوت مرتفع ثم اضغطي على الإجابة الصحيحة.">
+<h2>من أنا؟ 🕵️</h2><div class="card" id="g-who"></div>
+</section>
+
+<!-- 12 المهمة النهائية -->
+<section class="s b8" data-n="<b>قولي:</b> هذه آخر مهمة! اطلبي من كل طالب أن يضغط على السلوكيات التي يفعلها فعلاً. ثم نردد معاً العهد ونكشف لقب البطل. <b>اختمي</b> بتشجيع كل الطلاب.">
+<h2>المهمة النهائية: عهد البطل 🏆</h2>
+<div class="card big">اضغط على السلوك الذي تفعله دائماً 👇</div>
+<button class="chk" onclick="tg(this)">أُساعدُ والدتي وألبّي طلباتِهما برضا وسرور 🧺</button>
+<button class="chk" onclick="tg(this)">أخفضُ صوتي ولا أقاطعُ حديثَهما 🤫</button>
+<button class="chk" onclick="tg(this)">أقبّلُ رأسَ أمي وأبي كلّما دخلتُ عليهما 🥰</button>
+<button class="chk" onclick="tg(this)">أستأذنُ قبل الخروجِ من البيت 🚪</button>
+<button class="chk" onclick="tg(this)">أدعو لهما بالرحمةِ والمغفرةِ 🤲</button>
+<div class="card big" style="background:#fff2b8">«أنا مسؤولٌ عن بِرِّ والديَّ طوالَ حياتي»</div>
+<button onclick="hero(this)" style="background:#2bb673;box-shadow:0 5px 0 #1c8a56">اكشف لقبك 🎖️</button>
+<div id="hero" class="card big" style="display:none"></div>
+</section>
+
+<!-- 13 الختام -->
+<section class="s b1" data-n="<b>قولي:</b> بارك الله فيكم! لنردد الخلاصة معاً. <b>اطلبي</b> من كل طالب أن يخبر والديه اليوم بجملة جميلة. ثم أنجزي نشاط الرسم والإهداء من ص16.">
+<div class="badge">🏅</div>
+<h1>أحسنتم يا أبطال!</h1>
+<div class="card big">💛 بِرُّ الوالدين: طاعتُهما والإحسانُ إليهما واحترامُهما.<br>🌈 فضلُه: سببٌ لدخول الجنة ورضا الله.<br>🤲 لا أنسى الدعاءَ لهما.</div>
+<div class="mas"><div class="face">🧒</div><div class="bub">اليوم قل لأمك وأبيك كلمة جميلة، وارسم لهما هدية حب! 🎨</div></div>
+</section>
+</main>
+
+<aside id="notes"></aside>
+<nav>
+<button onclick="go(i+1)" aria-label="التالي">◀ التالي</button>
+<div id="bar"><i></i></div>
+<span class="stars">⭐ <b id="sc">0</b></span>
+<button onclick="go(i-1)" style="background:#7b61ff;box-shadow:0 5px 0 #5a43c9" aria-label="السابق">السابق ▶</button>
+<button onclick="document.getElementById('notes').classList.toggle('on')" style="background:#243b53;box-shadow:0 5px 0 #0f1e2e">👩‍🏫</button>
+</nav>
+</div>
+<script>
+var S=[].slice.call(document.querySelectorAll('.s')),i=0,stars=0;
+function star(){stars++;document.getElementById('sc').textContent=stars}
+function boom(){for(var k=0;k<26;k++){var e=document.createElement('span');e.className='cf';e.textContent=['⭐','🌟','🎉','💛','✨'][k%5];e.style.left=Math.random()*100+'vw';e.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(e);setTimeout(function(x){x.remove()},3400,e)}}
+function go(n){if(n<0||n>=S.length)return;S[i].classList.remove('on');i=n;S[i].classList.add('on');S[i].scrollTop=0;
+document.querySelector('#bar i').style.width=((i+1)/S.length*100)+'%';
+document.getElementById('notes').innerHTML='<b>👩‍🏫 للمعلمة:</b> '+(S[i].dataset.n||'')}
+document.addEventListener('keydown',function(e){if(e.key=='ArrowLeft')go(i+1);if(e.key=='ArrowRight')go(i-1)});
+// كشف تدريجي
+S.forEach(function(s){var b=s.querySelector('.nx');if(!b)return;b.onclick=function(){var n=s.querySelector('.st:not(.on)');if(n){n.classList.add('on');star()}if(!s.querySelector('.st:not(.on)'))b.style.display='none'}});
+// كلمات مخفية
+document.querySelectorAll('.bl').forEach(function(b){b.onclick=function(){if(b.classList.contains('on'))return;b.textContent=b.dataset.w;b.classList.add('on');star();if(document.querySelectorAll('.bl:not(.on)').length==0)boom()}});
+// محرّك الأسئلة
+function quiz(id,items){var el=document.getElementById(id),n=0,got=0;
+function draw(){if(n>=items.length){el.innerHTML='<div class="ico">🏆</div><p class="big">أنهيت اللعبة! حصلت على '+got+' من '+items.length+' نجوم ⭐</p>';if(got>=items.length-1)boom();return}
+var t=items[n];el.innerHTML='<p class="big" style="color:var(--pu)">السؤال '+(n+1)+' / '+items.length+'</p><p class="big">'+t.q+'</p><div class="row" id="'+id+'o"></div><div class="fb" id="'+id+'f"></div>';
+var tries=0,done=false;t.o.forEach(function(o,k){var b=document.createElement('button');b.className='opt';b.innerHTML=o;b.onclick=function(){if(done||b.classList.contains('no'))return;var f=document.getElementById(id+'f');
+if(k==t.a){done=true;b.classList.add('ok');f.style.color='#1c8a56';f.textContent='أحسنت! 🌟 إجابة رائعة!';if(tries==0){got++}star();var nb=document.createElement('button');nb.textContent=n+1<items.length?'السؤال التالي ➜':'النتيجة 🏁';nb.onclick=function(){n++;draw()};document.getElementById(id+'f').after(nb)}
+else{tries++;b.classList.add('no');f.style.color='#c0392b';f.textContent='قريب! حاول مرة أخرى 💪 '+(t.h||'')}};document.getElementById(id+'o').appendChild(b)})}
+draw()}
+quiz('g-think',[
+{q:'تحبُّ والدتي النظافةَ وتقولُ إنها صفةُ المؤمن. ماذا أفعل؟',o:['أحافظ على نظافتي ونظافة بيتي 🧼','أترك أغراضي مبعثرة'],a:0,h:'تذكّر: أفعل ما تحبه أمي.'},
+{q:'يحزنُ والدي عندما أتعثّرُ في دراستي. ماذا أفعل؟',o:['أهمل واجباتي','أجتهد وأستذكر دروسي 📚'],a:1,h:'ما الذي يفرح والدي؟'},
+{q:'تشعرُ أمي بالقلقِ عندما أتأخّرُ خارجَ البيت. ماذا أفعل؟',o:['أعود في الوقت المحدد ⏰','أتأخر مع أصدقائي'],a:0,h:'فكّر في شعور أمي.'},
+{q:'يوصيني والدي بالابتعادِ عن رفاقِ السوء. ماذا أفعل؟',o:['أتجاهل نصيحته','أطيع نصيحته وأختار الأصدقاء الصالحين 👫'],a:1,h:'نصيحة الوالدين كنز.'}]);
+quiz('g-quiz',[
+{q:'ما معنى بِرِّ الوالدين؟',o:['طاعتهما والإحسان إليهما واحترامهما 💛','تجاهل كلامهما','رفع الصوت عليهما'],a:0,h:'ابحث عن الكلمات الجميلة.'},
+{q:'رضا الله في رضا…',o:['الأصدقاء','الوالدين 👨‍👩‍👧','الجيران'],a:1,h:'تذكّر حديث الترمذي.'},
+{q:'كيف نتحدث مع والدينا؟',o:['بصوت عالٍ','بصوت منخفض وكلمات جميلة 🗣️','نقاطعهما'],a:1,h:'نخفض الصوت عند الحديث معهما.'},
+{q:'ماذا قال الرسول ﷺ لمن أبكى والديه بالهجرة؟',o:['ارجع إليهما فأضحكهما كما أبكيتهما 😊','لا ترجع إليهما','لا تهتم لبكائهما'],a:0,h:'أضحكهما كما أبكيتهما.'},
+{q:'بماذا ندعو لوالدينا؟',o:['بالرحمة والمغفرة 🤲','بالنسيان'],a:0,h:'دعاء جميل.'},
+{q:'ما جزاء من يبرّ والديه؟',o:['سخط الله','رضا الله ودخول الجنة 🌈','لا شيء'],a:1,h:'رضا الله في رضا الوالدين.'}]);
+quiz('g-tf',[
+{q:'قالَ الحقيقةَ لوالديه ولم يكذبْ عليهما أبداً.',o:['صح ✅','خطأ ❌'],a:0,h:'الصدق من البر.'},
+{q:'جلسَ بأدبٍ واحترامٍ أمامَ والديه.',o:['صح ✅','خطأ ❌'],a:0,h:'الأدب من البر.'},
+{q:'طلبتْ إليها أمُّها أمراً فلم تُسرعْ في تلبيةِ طلبِها.',o:['صح ✅','خطأ ❌'],a:1,h:'هل هذا موقف نؤيده؟'},
+{q:'أزعجَ والديه عند نومهما بإثارة المشاكل مع إخوته.',o:['صح ✅','خطأ ❌'],a:1,h:'هل هذا موقف نؤيده؟'},
+{q:'نادى الأبُ أحدَ أبنائه فسمعَه ولم يُجبْه.',o:['صح ✅','خطأ ❌'],a:1,h:'نجيب فوراً.'},
+{q:'تحدّثَ مع والديه بصوتٍ مرتفع.',o:['صح ✅','خطأ ❌'],a:1,h:'نخفض أصواتنا.'}].map(function(x){x.q='<b>أؤيّد هذا الموقف؟</b> '+x.q;x.o=['أؤيّد ✅','لا أؤيّد ❌'];return x}));
+quiz('g-who',[
+{q:'أنا كلماتٌ جميلةٌ أقولُها لوالديَّ بأدبٍ. من أنا؟ 🕵️',o:['القولُ الكريم 💬','الصراخ','الصمت'],a:0,h:'وقل لهما قولاً…'},
+{q:'أطلبُ فيَّ الرحمةَ والمغفرةَ لوالديَّ. من أنا؟',o:['الغضب','الدعاء 🤲','النسيان'],a:1,h:'نرفع أيدينا إلى الله.'},
+{q:'أنا سببُ دخولِ الجنةِ، ومن أحبِّ الأعمالِ إلى الله. من أنا؟',o:['بِرُّ الوالدين 💛','اللعب','النوم'],a:0,h:'هو عنوان درسنا!'}]);
+// ترتيب
+var W=['وَقُل','لَّهُمَا','قَوْلًا','كَرِيمًا'],cur=0;
+function ord(){cur=0;document.getElementById('ans').textContent='';document.getElementById('ofb').textContent='';var p=document.getElementById('pool');p.innerHTML='';
+W.map(function(w,k){return[w,k,Math.random()]}).sort(function(a,b){return a[2]-b[2]}).forEach(function(x){var b=document.createElement('button');b.className='w';b.textContent=x[0];b.onclick=function(){var f=document.getElementById('ofb');
+if(x[1]==cur){cur++;b.style.visibility='hidden';document.getElementById('ans').textContent+=x[0]+' ';f.style.color='#1c8a56';f.textContent='أحسنت! 🌟';if(cur==W.length){star();boom();f.textContent='ممتاز! ﴿وَقُل لَّهُمَا قَوْلًا كَرِيمًا﴾ 🎉'}}else{f.style.color='#c0392b';f.textContent='فكّر مرة أخرى 💪'}};p.appendChild(b)})}
+ord();
+function tg(b){b.classList.toggle('on');if(b.classList.contains('on'))b.textContent='✅ '+b.textContent}
+function hero(b){var t=stars>=24?'بطل برّ الوالدين الذهبي 🥇':stars>=14?'بطل برّ الوالدين الفضي 🥈':'بطل برّ الوالدين الصاعد 🥉';
+var h=document.getElementById('hero');h.style.display='block';h.innerHTML='<div class="badge">🏆</div>لقبك: <b style="color:#e0562b">'+t+'</b><br>جمعتَ '+stars+' نجمة ⭐<br><small>بطل يبرّ والديه كل يوم!</small>';boom();b.style.display='none'}
+go(0);
+</script>
+</body>
+</html>
